@@ -1,80 +1,137 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
+
   <meta charset="UTF-8">
-  <title>Super Awesome Gallery Time</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>The Pizza Gallery</title>
+
+  <!-- We link our html to the Bootstrap CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+<style>
+#footColor{
+  position: sticky;
+  bottom: 0;
+  background-color: lightgray;
+  padding: 10px 0px 10px 0px;
+  align: bottom;
+  text-align: center;
+  width: 100%;
+  float: none;
+
+}
+#bottomSpace {
+  margin-bottom: 30px;
+}
+
+
+
+</style>
+
 </head>
 
 <body>
-<div id="wrapper">
-
-<div id="section1">
-    <div>welcome to the wonderful world of matthew </div>
-</div>
-<br> <br>
-
-<div id="galHeight">
-    <h1>Some Cool Pics of Foodz</h1>
-
-    <div id="gallery">
-            <div class="row">
-                    <div class="column">
-                      <img src="img/sushi.jpg" alt="sushi" style="width:100%"><br>sushi
-                    </div>
-                    <div class="column">
-                      <img src="img/eggs.jpg" alt="eggs" style="width:100%"><br>eggs
-                    </div>
-                    <div class="column">
-                      <img src="img/veggies.jpg" alt="veggies" style="width:100%"><br>veggies
-                    </div>
-                  </div>
-            <div class="row">
-                        <div class="column">
-                          <img src="img/burger.jpg" alt="burger" style="width:100%"><br>burger
-                        </div>
-                        <div class="column">
-                          <img src="img/pizza.jpg" alt="pizza" style="width:100%"><br>pizza
-                        </div>
-                        <div class="column">
-                          <img src="img/pasta.jpg" alt="pasta" style="width:100%"><br>pasta
-                        </div>
-            </div>
-            <div class="row">
-                    <div class="column">
-                      <img src="img/fries.jpg" alt="fries" style="width:100%"><br>fries
-                    </div>
-                    <div class="column">
-                      <img src="img/vegan.jpg" alt="vegan" style="width:100%"><br>vegan
-                    </div>
-                    <div class="column">
-                      <img src="img/pastry.jpg" alt="pastry" style="width:100%"><br>pastry
-                    </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">matthew sesno</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="gallery.html">Projects</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search">
+          </form>
         </div>
-        
-    </div>
+      </nav>
+<div class="container" id="bottomSpace">
 
-    <div id="section5">
-            <h2>contact</h2>
-            <p><ul>
-                    <li><a href="index.html" style="text-decoration:none;">home</a></li>
-                    <li><a href="gallery.html" style="text-decoration:none;">gallery</a></li>
-                    <li><a href="contact.html" style="text-decoration:none;">contact</a></li>
-                </ul>  </p>  
-    </div>
+<br>
+<div class="row">
+<div class="col-md-12"><h1>recent projects</h1></div>
+</div>
+<br>
 
+<div class="row">
+  <div class="col-md-4">
+    <p><a href="https://brunchclub.herokuapp.com/"><img src="brunchclub.jpg" class="rounded img-fluid"></a></p></div>
+  
+    <div class="col-md-4">
+      <p><a href="https://biteburger.herokuapp.com/burgers"><img src="biteburger.jpg" class="rounded img-fluid"></a></p></div>
+      
+  <div class="col-md-4">
+    <p><a href="https://peaceful-fjord-79604.herokuapp.com/"><img src="friendfinder.jpg" class="rounded img-fluid"></a></p></div>
+      
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <p><a href="https://github.com/msesno/liri"><img src="liri.jpg" class="rounded img-fluid"></a></p></div>
+      
+    <div class="col-md-4">
+      <p><a href="https://guarded-shore-29867.herokuapp.com/all"><img src="starwars-express.jpg" class="rounded img-fluid"></a></p></div>
+            
+    <div class="col-md-4">
+      <p><a href="https://github.com/msesno/wamazon"><img src="wamazon.jpg" class="rounded img-fluid"></a></p></div>
+      
     </div>
-    <div id="section4">
-            <a id="logoTxt" href="index.html" style="text-decoration:none;">MS</a>
-    </div>
-    <div id="footer">
-        <p id="footColor"><a href="index.html" style="text-decoration:none;" id="footColor">home</a> | <a href="gallery.html" style="text-decoration:none;" id="footColor">gallery</a> | <a href="contact.html" style="text-decoration:none;" id="footColor">contact</a></p>
-    </div>
+<div class="row">
+<div class="col-md-4">
+  <p><a href="https://limbach17.github.io/goHAMM/home.html"><img src="phillypokedex.jpg" class="rounded img-fluid"></a></p></div>
+
+<div class="col-md-4">
+  <p><a href="https://msesno.github.io/trainFinder/"><img src="trainfinder.jpg" class="rounded img-fluid"></a></p></div>
+
+<div class="col-md-4">
+  <p><a href="https://msesno.github.io/giphy_finder/"><img src="giphyfinder.jpg" class="rounded img-fluid"></a></p></div>
     
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+      <p><a href="https://msesno.github.io/poke_trivia/"><img src="poketrivia.jpg" class="rounded img-fluid"></a></p></div>
+    
+    <div class="col-md-4">
+      <p><a href="https://msesno.github.io/collector_game"><img src="pokecollector.jpg" class="rounded img-fluid"></a></p></div>
+    
+    <div class="col-md-4">
+      <p><a href="https://msesno.github.io/quackalator"><img src="quackalator.jpg" class="rounded img-fluid"></a></p></div>
+        
+  </div>
+
 
 </div>
 
 
+
+
+
+</div>
+
+
+
+</div>
+<footer>
+    <div class="bg-dark" id="footColor">
+      <span class="text-muted"><a href="index.html" class="text-decoration-none text-white">Home</a> | <a href="gallery.html" class="text-decoration-none text-white">Gallery</a> | <a href="contact.html" class="text-decoration-none text-white">Contact</a></span>
+    </div>
+</footer>
 </body>
 </html>
