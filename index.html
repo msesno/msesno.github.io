@@ -33,10 +33,10 @@
 }
 
 .bgimg {
-background-image: url('bg18.gif');
+background-image: url('bg16.gif');
 background-size: cover;
 background-repeat: no-repeat;
-opacity: .81;
+opacity: .85;
 
 }
 
@@ -45,7 +45,7 @@ opacity: .81;
 
 </head>
 
-<body>
+<body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">matthew sesno</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,12 +74,12 @@ opacity: .81;
 
 <br>
 
-<div class="jumbotron bg-dark bgimg">
+<div class="jumbotron bg-dark shadow-sm bgimg">
 <div class="row">
-<div class="col-md-12">
+<div class="col-md-12 ">
   <h1 class="text-center text-white"><i class="fas fa-cog fa-spin"></i> matthew sesno</h1> 
   <h5 class="text-center text-white">[making web things with javascript]</h5>
-  <hr class="bg-warning">
+  <hr class="bg-light">
   <div class="text-center">
   <div class="btn-group" role="group" align="center" aria-label="Basic example">
       <button type="button" class="btn btn-outline-light">about</button>
@@ -92,13 +92,13 @@ opacity: .81;
 </div>
 
 
-
-<div class="row"> <!-- start row -->
+<!-- start about -->
+<div class="row"> 
   <div class="col-md-12">
 
-          <div class="card">
+          <div class="card shadow-sm">
             <div class="card-header">
-              <h4 class="card-title"><i class="fas fa-laptop-code small"></i> <strong>javascript developer</strong></h4>
+              <h4 class="card-title"><i class="fas fa-laptop-code small"></i> <strong>full stack developer</strong></h4>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -128,7 +128,52 @@ opacity: .81;
         </div>
   <br>  
   </div>
-  </div> <!-- end row -->
+  </div> 
+  <!-- end about -->
+
+  <!-- start projects -->
+<div class="row"> 
+    <div class="col-md-12">
+            <div class="card shadow-sm">
+              <div class="card-header">
+                <h4 class="card-title"><i class="fas fa-laptop-code small"></i> <strong>recent projects</strong></h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </li>
+              </ul>
+              <div class="card-body">
+                <!-- <a href="#" class="card-link btn btn-outline-dark"><i class="far fa-file"></i> resume</a>
+                <a href="#" class="card-link btn btn-outline-info"><i class="fas fa-tasks"></i> projects</a>
+                <a href="#" class="card-link btn btn-outline-primary"><i class="fab fa-github"></i> github</a> -->
+  
+  
+              <div class="btn-group btn-group-md" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-secondary bg-dark"><i class="far fa-file"></i> resume</button>
+                  <button type="button" class="btn btn-secondary bg-dark"><i class="fas fa-tasks"></i> projects</button>
+                  <button type="button" class="btn btn-secondary bg-dark"><i class="fab fa-github"></i> github</button>
+              </div>
+  
+              </div>
+            
+          </div>
+
+    <br>  
+    </div>
+    </div> 
+    <!-- end about -->
 
 <!-- <div class="row">
         <div class="col-md-8">
@@ -150,7 +195,7 @@ opacity: .81;
 <div class="row">
   <!-- begin employment card -->
   <div class="col-md-7">
-    <div class="card" style="margin-bottom: 20px;">
+    <div class="card shadow-sm" style="margin-bottom: 20px;">
       <div class="card-header">
         <h4 class="card-title"><strong>Employment</strong></h4>
         <p class="card-text">+ recent opportunities</p>
@@ -178,7 +223,7 @@ opacity: .81;
 
   <!-- begin education card -->
   <div class="col-md-5">
-    <div class="card">
+    <div class="card shadow-sm">
       <div class="card-header">
         <h4 class="card-title"><strong>Education</strong></h4>
         <p class="card-text">+ recent accreditations</p>
