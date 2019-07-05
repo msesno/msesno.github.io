@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>The Pizza Bio</title>
+  <title>ms home</title>
 
   <!-- We link our html to the Bootstrap CDN -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +30,14 @@
 }
 #bottomSpace {
   margin-bottom: 30px;
+}
+
+.bgimg {
+background-image: url('bg18.gif');
+background-size: cover;
+background-repeat: no-repeat;
+opacity: .81;
+
 }
 
 
@@ -66,49 +74,30 @@
 
 <br>
 
-<div class="jumbotron bg-dark">
+<div class="jumbotron bg-dark bgimg">
 <div class="row">
 <div class="col-md-12">
   <h1 class="text-center text-white"><i class="fas fa-cog fa-spin"></i> matthew sesno</h1> 
   <h5 class="text-center text-white">[making web things with javascript]</h5>
+  <hr class="bg-warning">
+  <div class="text-center">
+  <div class="btn-group" role="group" align="center" aria-label="Basic example">
+      <button type="button" class="btn btn-outline-light">about</button>
+      <button type="button" class="btn btn-outline-light">projects</button>
+      <button type="button" class="btn btn-outline-light">employment</button>
+      <button type="button" class="btn btn-outline-light">education</button>
+  </div></div>
 </div>
 </div>
 </div>
 
-<div class="row"> <!-- start row -->
-<div class="col-md-12">
-  <div class="card">
-  <div class="card-header">
-  <h3 class="bbottom"><i class="fas fa-laptop-code small"></i> javascript developer</h3>
-  </div>
-  <div class="card-body">
-  <div class="col">
-  <img src="ava.png" align="left"  style="padding-right: 15px" width="20%">
-  </div>
-  <div class="col">
-  <p>Many different skills: HTML5, CSS3, JavaScript, jQuery, Java, Bootstrap, Express.js, React.js, Node.js, Database Theory, Bookshelf.js, MongoDB, MySQL, Command Line, Git, and more. </p>
-  <p>Experience with architechtural design, 2d line drawings/programs, graphic design, branding/typography front end design skills. HTML email designer, full stack developer. </p>
-  <p>Please visit the pages below for samples, or submit contact form with needs.</p>
-  </div>
-  <div class="card-body">
-  <a href="#" class="card-link btn btn-outline-dark"><i class="far fa-file"></i> resume</a>
-  <a href="#" class="card-link btn btn-outline-info"><i class="fas fa-tasks"></i> projects</a>
-  <a href="#" class="card-link btn btn-outline-primary"><i class="fab fa-github"></i> github</a>
-  </div>
-  </div>
-  </div>
 
-
-</div>
-</div> <!-- end row -->
-
-<br>
 
 <div class="row"> <!-- start row -->
   <div class="col-md-12">
 
           <div class="card">
-            <div class="card-header bg-light">
+            <div class="card-header">
               <h4 class="card-title"><i class="fas fa-laptop-code small"></i> <strong>javascript developer</strong></h4>
             </div>
             <ul class="list-group list-group-flush">
@@ -123,9 +112,17 @@
               </li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link btn btn-outline-dark"><i class="far fa-file"></i> resume</a>
+              <!-- <a href="#" class="card-link btn btn-outline-dark"><i class="far fa-file"></i> resume</a>
               <a href="#" class="card-link btn btn-outline-info"><i class="fas fa-tasks"></i> projects</a>
-              <a href="#" class="card-link btn btn-outline-primary"><i class="fab fa-github"></i> github</a>
+              <a href="#" class="card-link btn btn-outline-primary"><i class="fab fa-github"></i> github</a> -->
+
+
+            <div class="btn-group btn-group-md" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary bg-dark"><i class="far fa-file"></i> resume</button>
+                <button type="button" class="btn btn-secondary bg-dark"><i class="fas fa-tasks"></i> projects</button>
+                <button type="button" class="btn btn-secondary bg-dark"><i class="fab fa-github"></i> github</button>
+            </div>
+
             </div>
           
         </div>
@@ -151,8 +148,9 @@
 </div> -->
 
 <div class="row">
+  <!-- begin employment card -->
   <div class="col-md-7">
-    <div class="card">
+    <div class="card" style="margin-bottom: 20px;">
       <div class="card-header">
         <h4 class="card-title"><strong>Employment</strong></h4>
         <p class="card-text">+ recent opportunities</p>
@@ -166,32 +164,44 @@
         
       </ul>
       <div class="card-body">
-        <a href="#" class="card-link btn btn-outline-dark">resume</a>
-        <a href="#" class="card-link btn btn-outline-info">projects</a>
+        <!-- <a href="#" class="card-link btn btn-outline-dark">resume</a>
+        <a href="#" class="card-link btn btn-outline-info">projects</a> -->
+        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-dark"><i class="far fa-file"></i> resume</button>
+            <button type="button" class="btn btn-outline-dark"><i class="fas fa-tasks"></i> projects</button>
+            <button type="button" class="btn btn-outline-dark"><i class="fab fa-github"></i> github</button>
+        </div>
       </div>
     </div>
     </div>
-    <hr>
+<!-- end employment card -->
+
+  <!-- begin education card -->
   <div class="col-md-5">
     <div class="card">
-      <div class="card-header bg-light">
+      <div class="card-header">
         <h4 class="card-title"><strong>Education</strong></h4>
         <p class="card-text">+ recent accreditations</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><strong>Penn LPS ('19)</strong> <br> Coding Bootcamp, Full Stack</li>
         <li class="list-group-item"><strong>UArts ('15)</strong> <br> Certificate, Web Design</li>
-        <li class="list-group-item"><strong>Middlebury College ('06)</strong> <br> Joint Major Art & Spanish, Minor Anthropology.</li>
+        <li class="list-group-item"><strong>Middlebury College ('06)</strong> <br> Bachelors Art/Spanish, Minor Antro</li>
         <li class="list-group-item"><strong>Harvard GSD ('04)</strong> <br>Architechtural Design Discorvery</li>
       </ul>
       <div class="card-body">
-        <a href="#" class="card-link btn btn-outline-dark">resume</a>
-        <a href="#" class="card-link btn btn-outline-primary">github</a>
+        <!-- <a href="#" class="card-link btn btn-outline-dark">resume</a>
+        <a href="#" class="card-link btn btn-outline-primary">github</a> -->
+        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-dark"><i class="far fa-file"></i> resume</button>
+            <button type="button" class="btn btn-outline-dark"><i class="fas fa-tasks"></i> projects</button>
+            <button type="button" class="btn btn-outline-dark"><i class="fab fa-github"></i> github</button>
+        </div>
       </div>
     
   </div>
 </div>
-
+<!-- end education card -->
 
 </div>
 
