@@ -13,6 +13,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Megrim|Montserrat+Subrayada|Poiret+One&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="form.css" >
+  <script src="form.js"></script>
  
 
 
@@ -22,9 +25,9 @@
   position: sticky;
   bottom: 0;
   background-color: lightgray;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 20px;
   align: bottom;
-  text-align: center;
+  text-align: left;
   width: 100%;
   float: none;
 
@@ -37,6 +40,10 @@ h1 {
   font-family: 'Poiret One', cursive;
 }
 
+/* .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
+    color: #FFD180 !important;
+
+} */
 
 .txt {
   font-family: 'Poiret One';
@@ -49,6 +56,18 @@ opacity: .85;
 
 }
 
+.ptop {
+  padding-top: 10px;
+}
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 4;
+}
+
 
 </style>
 
@@ -56,7 +75,7 @@ opacity: .85;
 
 <body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">matthew sesno</a>
+        <a class="navbar-brand" href="index.html"><i class="fas fa-cog fa-spin"></i> m. sesno</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -69,10 +88,10 @@ opacity: .85;
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item scrolly" href="#about">about</a>
-                <a class="dropdown-item scrolly" href="#">employment</a>
-                <a class="dropdown-item scrolly" href="#">education</a>
+                <a class="dropdown-item scrolly" href="#employment">employment</a>
+                <a class="dropdown-item scrolly" href="#education">education</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">github</a>
+                <a class="dropdown-item" href="https://github.com/msesno">github</a>
               </div>
             </li>
             <li class="nav-item">
@@ -83,16 +102,50 @@ opacity: .85;
             </li>
           </ul>
           <form class="form-inline my-2 my-md-0">
-            <button class="btn btn-sm btn-outline-info my-2 my-sm-0" type="submit">resume</button>
+            <!-- <button class="btn btn-sm btn-outline-info my-2 my-sm-0 navbar-btn" type="submit" href="www.google.com">resume</button> -->
+            <!-- <a class="btn btn-sm btn-outline-warning btn-sm d-lg-inline-block my-2 my-sm-0 text-warning" role="button">resume</a> -->
+
+            <!-- modal button-->
+            <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" data-target="#resume">
+                <i class="fas fa-file-pdf"></i> resume
+              </button>
+              <!-- Modal resume -->
+              <div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="resumeLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-light" id="resumeLabel">resume quickview</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="badge btn-danger btn-sm">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      
+
+                        <embed src="assets/img/ms_resume_19.pdf" type="application/pdf"   height="300px" width="100%" class="responsive">
+                         
+
+                    </div>
+                    <div class="modal-footer">
+                      <a href="assets/img/ms_resume_19.pdf" class="btn btn-outline-warning btn-sm" target="_blank" download="ms_resume_19.pdf"><i class="fas fa-file-pdf"></i> view full</a>
+                      <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end modal resume-->
           </form>
         </div>
+        
       </nav>
+      <!-- end nav -->
+<div class="dot sticky text-center shadow-sm"><a href="#" class="btn btn-danger badge shadow-sm"><i class="fas fa-chevron-circle-up"></i> top</a></div>
 <div class="container" id="bottomSpace">
 
 <br>
 
 <div class="jumbotron bgimg shadow">
-<div class="row ">
+<div class="row">
 <div class="col-md-12 ">
   <h1 class="text-center text-white"><i class="fas fa-cog fa-spin"></i> <strong>matthew sesno</strong></h1> 
   <h5 class="text-center text-white txt">[making web things with javascript]</h5>
@@ -110,21 +163,21 @@ opacity: .85;
 
 
 <!-- start about -->
-<div class="row"> 
+<div class="row" id="bottomSpace"> 
   <div class="col-md-12" id="about">
 
           <div class="card shadow">
             <div class="card-header bg-dark text-white">
-              <h4 class="card-title"><i class="fas fa-laptop-code "></i> <strong>full stack developer</strong></h4>
+              <h4 class="card-title"><i class="fas fa-laptop-code "></i> <strong>Full Stack Developer</strong></h4>
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush ptop">
               <li class="list-group-item">
                 <div class="image-wrapper">
                   <img src="ava.png" align="left"  style="padding-right: 10px" width="15%">
                 </div>
-                  <p><i class="fas fa-cog fa-spin"></i> <strong>Skills:</strong> git, github, html5, css3, bootstrap 4, javascript, jquery, timers, ajax, firebase, node.js, js constructors, mysql, express, handlebars, sequelize, mongoDB, react.js, arrow functions, search, sort, data-structure, & more. 
+                  <p><i class="fas fa-cog fa-spin"></i> <strong>Skills:</strong> Frontend and Backend. Git, github, html5, css3, bootstrap 4, javascript, jquery, timers, ajax, firebase, node.js, js constructors, mysql, express, handlebars, sequelize, mongoDB, react.js, arrow functions, search, sort, data-structures, & more. 
                   <br><br>
-                  <i class="fas fa-globe fa-spin"></i> <strong>Experience:</strong> architechtural design, 2d line drawings/programs, graphic design, branding/typography, HTML email designer, webmaster,  and full stack developer. 
+                  <i class="fas fa-globe fa-spin"></i> <strong>Experience:</strong> Developmental marketing, html email deployment, social media, webmaster, architechtural design, 2d line drawings & programs, graphic design, branding, typography... a complete package full stack developer. 
                   Please visit the pages below for samples, or submit contact form with needs.</p>
               </li>
             </ul>
@@ -135,25 +188,25 @@ opacity: .85;
 
 
             <div class="btn-group btn-group-sm btn-block" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-outline-dark shadow-sm"><i class="far fa-file"></i> resume</button>
-                <button type="button" class="btn btn-outline-dark shadow-sm"><i class="fas fa-tasks"></i> projects</button>
-                <button type="button" class="btn btn-outline-dark shadow-sm"><i class="fab fa-github"></i> github</button>
+                <a class="btn btn-outline-secondary" href="#projects" role="button"><i class="fas fa-tasks"></i> projects</a>
+                <a class="btn btn-outline-secondary" href="#employment" role="button"><i class="far fa-file"></i> employment</a>
+                <a class="btn btn-outline-secondary" href="#contact" role="button"><i class="fab fa-github"></i> contact</a>
             </div>
 
             </div>
           
         </div>
-  <br>  
+    
   </div>
   </div> 
   <!-- end about -->
 
   <!-- start projects -->
-<div class="row"> 
+<div class="row" id="bottomSpace"> 
     <div class="col-md-12" id="projects">
             <div class="card shadow">
               <div class="card-header  bg-dark text-white">
-                <h4 class="card-title"><i class="fas fa-laptop-code small"></i> <strong>recent projects</strong></h4>
+                <h4 class="card-title"><i class="fas fa-laptop-code small"></i> <strong>Recent Projects</strong></h4>
               </div>
               <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -161,31 +214,41 @@ opacity: .85;
               <div class="row">
                         <div class="col-md-4 p-3">
                             <div class="card shadow-sm" >
-                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <img class="card-img-top border-bottom" src="assets/img/pokemap2_sq.png" alt="Card image cap">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  <h5 class="card-title">philly pokemaps</h5>
+                                  <p class="card-text">Fun little Google Maps API project displaying locations on map and table for pokemongo in Philadelphia</p>
+                                  <!-- <a href="https://msesno.github.io/pokemaps/home.html" class="btn btn-outline-primary btn-sm">philly pokemaps</a> -->
+                                  <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
+                                      <a href="https://msesno.github.io/pokemaps/home.html" class="btn btn-outline-primary btn-sm shadow-sm">deployed</a>
+                                      <a href="https://github.com/msesno/pokemaps" class="btn btn-outline-dark btn-sm shadow-sm"><i class="fab fa-github"></i> github</a>
+                                  </div>
                                 </div>
                               </div>
                         </div>
                         <div class="col-md-4 p-3">
                           <div class="card shadow-sm" >
-                              <img class="card-img-top" src="..." alt="Card image cap">
+                              <img class="card-img-top border-bottom" src="assets/img/bc2_sq.png" alt="Card image cap">
                               <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">brunch.club</h5>
+                                <p class="card-text">Beta site for brunch.club 2.0 with interactive javascript for user posts/reviews and events.</p>
+                                <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
+                                    <a href="https://brunchclub.herokuapp.com/" class="btn btn-outline-primary btn-sm shadow-sm">deployed</a>
+                                    <a href="https://github.com/msesno/brunchclub" class="btn btn-outline-dark btn-sm shadow-sm"><i class="fab fa-github"></i> github</a>
+                                </div>
                               </div>
                             </div>
                       </div>
                       <div class="col-md-4 p-3">
                         <div class="card shadow-sm" >
-                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <img class="card-img-top border-bottom" src="assets/img/sb2_sq.png" alt="Card image cap">
                             <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <h5 class="card-title">Softball Stats</h5>
+                              <p class="card-text">Quick and dirty REACT site beta to track and record softball teams, players, and games.</p>
+                              <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
+                                  <a href="https://fierce-ravine-50744.herokuapp.com/" class="btn btn-outline-primary btn-sm shadow-sm">deployed</a>
+                                  <a href="https://github.com/msesno/softballstats" class="btn btn-outline-dark btn-sm shadow-sm"><i class="fab fa-github"></i> github</a>
+                              </div>
                             </div>
                           </div>
                     </div>
@@ -199,17 +262,16 @@ opacity: .85;
                   <a href="#" class="card-link btn btn-outline-primary"><i class="fab fa-github"></i> github</a> -->
     
     
-                <div class="btn-group btn-group-sm btn-block" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-outline-dark shadow-sm"><i class="far fa-file"></i> resume</button>
-                    <button type="button" class="btn btn-outline-dark shadow-sm"><i class="fas fa-tasks"></i> projects</button>
-                    <button type="button" class="btn btn-outline-dark shadow-sm"><i class="fab fa-github"></i> github</button>
+                <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
+                    <a class="btn btn-outline-secondary shadow-sm disabled" href="gallery.html" role="button"><i class="fas fa-tasks"></i> more projects</a>
+                    <a class="btn btn-outline-secondary shadow-sm" href="#" role="button"><i class="fab fa-github"></i> github</a>
                 </div>
     
                 </div>
             
           </div>
 
-    <br>  
+     
     </div>
     </div> 
     <!-- end about -->
@@ -233,7 +295,7 @@ opacity: .85;
 
 
 <!-- begin employment card -->
-<div class="row">
+<div class="row" id="bottomSpace">
   <div class="col-md-7" id="employment">
     <div class="card shadow" style="margin-bottom: 20px;">
       <div class="card-header bg-dark text-white">
@@ -252,9 +314,8 @@ opacity: .85;
         <!-- <a href="#" class="card-link btn btn-outline-dark">resume</a>
         <a href="#" class="card-link btn btn-outline-info">projects</a> -->
         <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-outline-dark"><i class="far fa-file"></i> resume</button>
-            <button type="button" class="btn btn-outline-dark"><i class="fas fa-tasks"></i> projects</button>
-            <button type="button" class="btn btn-outline-dark"><i class="fab fa-github"></i> github</button>
+            <a class="btn btn-outline-secondary shadow-sm" href="#projects" role="button"><i class="fas fa-tasks"></i> projects</a>
+            <a class="btn btn-outline-secondary shadow-sm" href="#contact" role="button"><i class="fab fa-github"></i> github</a>
         </div>
       </div>
     </div>
@@ -278,9 +339,8 @@ opacity: .85;
         <!-- <a href="#" class="card-link btn btn-outline-dark">resume</a>
         <a href="#" class="card-link btn btn-outline-primary">github</a> -->
         <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-outline-dark"><i class="far fa-file"></i> resume</button>
-            <button type="button" class="btn btn-outline-dark"><i class="fas fa-tasks"></i> projects</button>
-            <button type="button" class="btn btn-outline-dark"><i class="fab fa-github"></i> github</button>
+            <a class="btn btn-outline-secondary shadow-sm" href="#about" role="button"><i class="fas fa-info-circle"></i> about</a>
+            <a class="btn btn-outline-secondary shadow-sm" href="#education" role="button"><i class="far fa-file"></i> education</a>
         </div>
       </div>
     
@@ -295,21 +355,44 @@ opacity: .85;
 
 <!-- start contact -->
 <div class="row"> 
-    <div class="col-md-12" id="about">
+    <div class="col-md-12" id="contact">
   
             <div class="card shadow">
               <div class="card-header bg-dark text-white">
-                <h4 class="card-title"><i class="fas fa-laptop-code "></i> <strong>full stack developer</strong></h4>
+                <h4 class="card-title"><i class="fas fa-laptop "></i> <strong>Contact Form</strong></h4>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                  <div class="image-wrapper">
-                    <img src="ava.png" align="left"  style="padding-right: 10px" width="15%">
-                  </div>
-                    <p><i class="fas fa-cog fa-spin"></i> <strong>Skills:</strong> git, github, html5, css3, bootstrap 4, javascript, jquery, timers, ajax, firebase, node.js, js constructors, mysql, express, handlebars, sequelize, mongoDB, react.js, arrow functions, search, sort, data-structure, & more. 
-                    <br><br>
-                    <i class="fas fa-globe fa-spin"></i> <strong>Experience:</strong> architechtural design, 2d line drawings/programs, graphic design, branding/typography, HTML email designer, webmaster,  and full stack developer. 
-                    Please visit the pages below for samples, or submit contact form with needs.</p>
+                  <br>
+                    <div class=" inner" >
+                        <div class="containerz shadow-sm">
+                           
+                            <h1 style="font-size: 28px;">
+                                <strong>contact with questions</strong>
+                            </h1><hr>
+                            <form method="post" id="reused_form">
+                                <label for="name">Your Name:</label>
+                                <input id="name" type="text" name="Name" required maxlength="50"><br><br>
+                                <label for="email">Email Address:</label>
+                                <input id="email" type="email" name="Email" required maxlength="50"><br><br>
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="Message" rows="10" maxlength="6000" required></textarea><br><br>
+                                <button class="btn btn-sm btn-block btn-outline-dark shadow-sm" type="submit">Submit</button>
+                            </form>
+                            <div id="success_message" style="display:none">
+                                <d><h3 align="center">Message Submitted successfully!</h3></d> 
+                                <d><div> I will get back to you as soon as possible. <br><br>
+                                
+                                <button onclick="location=URL" style="width: 25%;">back to top</button>
+                                
+                                </div></d>
+                            </div>
+                            <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                        </div>
+                    </div><br>
+
+
+
                 </li>
               </ul>
               <div class="card-body card-footer bg-white">
@@ -319,15 +402,14 @@ opacity: .85;
   
   
               <div class="btn-group btn-group-sm btn-block" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-outline-dark shadow-sm"><i class="far fa-file"></i> resume</button>
-                  <button type="button" class="btn btn-outline-dark shadow-sm"><i class="fas fa-tasks"></i> projects</button>
-                  <button type="button" class="btn btn-outline-dark shadow-sm"><i class="fab fa-github"></i> github</button>
+                  <a class="btn btn-outline-secondary shadow-sm" href="#" role="button"><i class="far fa-file"></i> back to top</a>
+                  <a class="btn btn-outline-secondary shadow-sm" href="#projects" role="button"><i class="fas fa-tasks"></i> projects</a>
               </div>
   
               </div>
             
           </div>
-    <br>  
+    
     </div>
     </div> 
     <!-- end contact -->
@@ -335,7 +417,7 @@ opacity: .85;
 </div>
 <footer>
     <div class="bg-dark" id="footColor">
-      <span class="text-muted"><a href="index.html" class="text-decoration-none text-white">Home</a> | <a href="gallery.html" class="text-decoration-none text-white">Gallery</a> | <a href="contact.html" class="text-decoration-none text-white">Contact</a></span>
+      <span class="text-muted shadow-sm"><a href="https://github.com/msesno" class="text-decoration-none badge btn btn-sm btn-outline-light shadow-sm"><i class="fab fa-github"></i> github</a> | <a href="assets/img/ms_resume_19.pdf" class="text-decoration-none badge btn btn-sm btn-outline-warning shadow-sm"><i class="fas fa-file-pdf"></i> resume</a></span>   
     </div>
 </footer>
 
