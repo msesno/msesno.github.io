@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <title>ms home</title>
 
-  <!-- We link our html to the Bootstrap CDN -->
+  <!-- Links and stylesheets -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicons/favicon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -16,10 +17,31 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="form.css" >
   <script src="form.js"></script>
- 
+<!-- End Links -->
 
+<!-- Form Scripts -->
+  <script>
+			function goBack() {
+    		window.history.back()
+			}
+		</script>
+		<script language="javascript"> 
+				   function toggle() {
+					var ele = document.getElementById("toggleText");
+					var text = document.getElementById("displayText");
+				if(ele.style.display == "block") {
+    				ele.style.display = "none";
+				text.innerHTML = "new customers";
+  				}
+			else {
+				ele.style.display = "block";
+				text.innerHTML = "existing customers";
+	            }
+            } 
+    </script>
+<!-- End Form Scripts -->
 
-
+<!-- Styles (will move to external later) -->
 <style>
 #footColor{
   position: sticky;
@@ -71,17 +93,18 @@ div.sticky {
 
 
 /* deciding later if want sticky top nav or not below */
-.stick {
+/* .stick {
   position:sticky;
   top:0;
   z-index:3;
-}
-
+} */
 
 </style>
+<!-- End Styles -->
 
 </head>
 
+<!-- Begin Body -->
 <body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark stick">
         <a class="navbar-brand" href="index.html"><i class="fas fa-cog fa-spin"></i> m. sesno</a>
@@ -93,21 +116,21 @@ div.sticky {
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                about
+                  <i class="fas fa-info"></i> about
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item scrolly" href="#about">about</a>
-                <a class="dropdown-item scrolly" href="#employment">employment</a>
-                <a class="dropdown-item scrolly" href="#education">education</a>
+                <a class="dropdown-item scrolly" href="#about"><i class="fas fa-info-circle"></i> about</a>
+                <a class="dropdown-item scrolly" href="#employment"><i class="fas fa-user-tie"></i> employment</a>
+                <a class="dropdown-item scrolly" href="#education"><i class="fas fa-apple-alt"></i> education</a>  
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://github.com/msesno">github</a>
+                <a class="dropdown-item" href="https://github.com/msesno"><i class="fab fa-github"></i> github</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link scrolly" href="#projects">projects</a>
+              <a class="nav-link scrolly" href="#projects"><i class="fas fa-tasks"></i> projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link scrolly" href="#contact">contact</a>
+              <a class="nav-link scrolly" href="#contact"><i class="fas fa-inbox"></i> contact</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-md-0">
@@ -376,27 +399,112 @@ div.sticky {
                     <div class=" inner" >
                         <div class="containerz shadow-sm">
                            
-                            <h1 style="font-size: 28px;">
-                                <strong>contact with questions</strong>
+                            <h1 >
+                                <strong>direct contact form</strong>
                             </h1><hr>
-                            <form method="post" id="reused_form">
-                                <label for="name">Your Name:</label>
-                                <input id="name" type="text" name="Name" required maxlength="50"><br><br>
-                                <label for="email">Email Address:</label>
-                                <input id="email" type="email" name="Email" required maxlength="50"><br><br>
-                                <label for="message">Message:</label>
-                                <textarea id="message" name="Message" rows="10" maxlength="6000" required></textarea><br><br>
-                                <button class="btn btn-sm btn-block btn-outline-dark shadow-sm" type="submit">Submit</button>
-                            </form>
-                            <div id="success_message" style="display:none">
-                                <d><h3 align="center">Message Submitted successfully!</h3></d> 
-                                <d><div> I will get back to you as soon as possible. <br><br>
-                                
-                                <button onclick="location=URL" style="width: 25%;"><i class="fas fa-chevron-circle-up"></i> back to top</button>
-                                
-                                </div></d>
-                            </div>
-                            <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                            <form role="form" method="post" id="reused_form" enctype="multipart/form-data" >
+                              <div class="form-group">
+                                  <label for="name"> Name:</label>
+                                  <input type="text" class="form-control" id="name" name="name" required maxlength="50">
+                              </div>
+                              <div class="form-group">
+                                  <label for="email"> Email:</label>
+                                  <input type="email" class="form-control" id="email" name="email" required maxlength="50">
+                              </div>
+                              <div class="form-group">
+                                  <label for="name"> Message:</label>
+                                  <textarea class="form-control" type="textarea" name="message" id="message" required placeholder="Your Message Here" maxlength="6000" rows="7"></textarea>
+                              </div>
+                              
+                              
+                              
+                               <!-- begin working images --
+                              <div class="form-group">
+                                  <label for="name"> Optional File Upload:</label>
+                                  <input type="file" role="button" class="form-control btn btn-sm btn-outline-dark" id="image" name="image">
+                              </div>
+                              <!-- multiple files --
+                              <div class="form-group">
+                                  <label for="name"> Image Upload:</label>
+                                  <input type="file" class="form-control" id="image2" name="image2" required>
+                              </div>
+                              
+                              <div class="form-group">
+                                  <label for="name"> Image Upload:</label>
+                                  <input type="file" class="form-control" id="image3" name="image3" required>
+                              </div>
+                              <!-- end multiple files -->
+                              
+                              <!-- <br>
+
+                              <span class="glyphicon glyphicon-user"></span> 
+                              <a id="displayText" href="javascript:toggle();">new customer</a> - click  -->
+                              <!-- <div id="toggleText" style="display: none"><br>
+                              <div class="form-group">
+                              <div class="form-group">
+                              <label for="name">Type of Business</label><br>
+                    <input type="checkbox" name="Is-Retailer" value="&#10004;"> &rarr; Retailer <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Is-Wholesaler" value="&#10004;"> &rarr; Wholesaler <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Is-Greenhouse" value="&#10004;"> &rarr; Greenhouse <br>
+                  </div>
+                   <div class="form-group">
+                    <input type="checkbox" name="Is-Landscaper" value="&#10004;"> &rarr; Landscaper <br>
+                  </div>
+                             <div class="form-group">
+                    <input type="checkbox" name="Is-HomeGardener" value="&#10004;"> &rarr; Home Gardener <br>
+                  </div>
+                             <div class="form-group">
+                    <input type="checkbox" name="Is-Institution" value="&#10004;"> &rarr; Edu/Gov Institution <br>
+                  </div>
+                              </div>
+                              
+                              <br>
+                              
+                             
+                              <div class="form-group">
+                              <div class="form-group">
+                              <label for="name">Product Interest</label><br>
+                    <input type="checkbox" name="Wants-Plugs" value="&#10004;"> &rarr; Seed <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Wants-Seed" value="&#10004;"> &rarr; Plugs <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Wants-Annuals" value="&#10004;"> &rarr; Perennials <br>
+                  </div>
+                   <div class="form-group">
+                    <input type="checkbox" name="Wants-Nursery" value="&#10004;"> &rarr; Nursery <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Wants-VegetativeAnnuals" value="&#10004;"> &rarr; Vegetative Annuals <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Wants-Foliage" value="&#10004;"> &rarr; Foliage <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Wants-Hardgoods" value="&#10004;"> &rarr; Hardgoods <br>
+                  </div>
+                              <div class="form-group">
+                    <input type="checkbox" name="Wants-GreenFuse" value="&#10004;"> &rarr; GreenFuse <br>
+                  </div>
+                              </div></div> -->
+                              
+                              
+                              <br>
+                            
+                              
+                              
+                          <button type="submit" class="btn btn-sm btn-outline-info btn-block shadow-sm" id="btnContactUs">Send &rarr;</button>
+                          </form>
+                          <div id="success_message" style="width:100%; height:100%; display:none; " class="text-center"> <h1 style="font-size: 32px;">Your message was sent successfully!</h1> <br>
+                            <h5 class="txt">Thank you for your interest, I have recieved your message and will respond as soon as possible.</h5> <br>
+                            <input class="MyButton btn btn-sm btn-outline-secondary shadow-sm" type="button" value="reload to send again" onclick="window.location.href='https://www.matthewsesno.com'" />
+                          </div>
+                          <div class="text-center" id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> <p>Sorry there was an error sending your form... <br>Reload page to retry or contact me at msesno@gmail.com </p></div>
                         </div>
                     </div><br>
 
@@ -421,7 +529,18 @@ div.sticky {
     
     </div>
     </div> 
-    <!-- end contact -->
+
+
+
+
+
+
+
+
+    
+
+
+    <!-- end contact row-->
 
 </div>
 <footer>
@@ -441,4 +560,5 @@ div.sticky {
 
 
 </body>
+<!-- End Body -->
 </html>
