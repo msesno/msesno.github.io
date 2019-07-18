@@ -32,6 +32,7 @@
   float: none;
 
 }
+
 #bottomSpace {
   margin-bottom: 30px;
 }
@@ -49,7 +50,7 @@ h1 {
   font-family: 'Poiret One';
 }
 .bgimg {
-background-image: url('bg16.gif');
+background-image: url('assets/img/bg16.gif');
 background-size: cover;
 background-repeat: no-repeat;
 opacity: .85;
@@ -69,12 +70,20 @@ div.sticky {
 }
 
 
+/* deciding later if want sticky top nav or not below */
+.stick {
+  position:sticky;
+  top:0;
+  z-index:3;
+}
+
+
 </style>
 
 </head>
 
 <body class="bg-light">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark stick">
         <a class="navbar-brand" href="index.html"><i class="fas fa-cog fa-spin"></i> m. sesno</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -144,7 +153,7 @@ div.sticky {
 
 <br>
 
-<div class="jumbotron bgimg shadow">
+<div class="jumbotron bgimg shadow bg-dark">
 <div class="row">
 <div class="col-md-12 ">
   <h1 class="text-center text-white"><i class="fas fa-cog fa-spin"></i> <strong>matthew sesno</strong></h1> 
@@ -168,12 +177,12 @@ div.sticky {
 
           <div class="card shadow">
             <div class="card-header bg-dark text-white">
-              <h4 class="card-title"><i class="fas fa-laptop-code "></i> <strong>Full Stack Developer</strong></h4>
+              <h4 class="card-title"><i class="fas fa-info-circle"></i> <strong>Full Stack Developer</strong></h4>
             </div>
             <ul class="list-group list-group-flush ptop">
               <li class="list-group-item">
                 <div class="image-wrapper">
-                  <img src="ava.png" align="left"  style="padding-right: 10px" width="15%">
+                  <img src="assets/img/ava.png" align="left"  style="padding-right: 10px" width="15%">
                 </div>
                   <p><i class="fas fa-cog fa-spin"></i> <strong>Skills:</strong> Frontend and Backend. Git, github, html5, css3, bootstrap 4, javascript, jquery, timers, ajax, firebase, node.js, js constructors, mysql, express, handlebars, sequelize, mongoDB, react.js, arrow functions, search, sort, data-structures, & more. 
                   <br><br>
@@ -189,7 +198,7 @@ div.sticky {
 
             <div class="btn-group btn-group-sm btn-block" role="group" aria-label="Basic example">
                 <a class="btn btn-outline-secondary" href="#projects" role="button"><i class="fas fa-tasks"></i> projects</a>
-                <a class="btn btn-outline-secondary" href="#employment" role="button"><i class="far fa-file"></i> employment</a>
+                <a class="btn btn-outline-secondary" href="#education" role="button"><i class="fas fa-apple-alt"></i> education</a>
                 <a class="btn btn-outline-secondary" href="#contact" role="button"><i class="fab fa-github"></i> contact</a>
             </div>
 
@@ -220,7 +229,7 @@ div.sticky {
                                   <p class="card-text">Fun little Google Maps API project displaying locations on map and table for pokemongo in Philadelphia</p>
                                   <!-- <a href="https://msesno.github.io/pokemaps/home.html" class="btn btn-outline-primary btn-sm">philly pokemaps</a> -->
                                   <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
-                                      <a href="https://msesno.github.io/pokemaps/home.html" class="btn btn-outline-primary btn-sm shadow-sm">deployed</a>
+                                      <a href="https://msesno.github.io/pokemaps/home.html" class="btn btn-outline-primary btn-sm shadow-sm"><i class="fas fa-paper-plane"></i> deployed</a>
                                       <a href="https://github.com/msesno/pokemaps" class="btn btn-outline-dark btn-sm shadow-sm"><i class="fab fa-github"></i> github</a>
                                   </div>
                                 </div>
@@ -233,7 +242,7 @@ div.sticky {
                                 <h5 class="card-title">brunch.club</h5>
                                 <p class="card-text">Beta site for brunch.club 2.0 with interactive javascript for user posts/reviews and events.</p>
                                 <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
-                                    <a href="https://brunchclub.herokuapp.com/" class="btn btn-outline-primary btn-sm shadow-sm">deployed</a>
+                                    <a href="https://brunchclub.herokuapp.com/" class="btn btn-outline-primary btn-sm shadow-sm"><i class="fas fa-paper-plane"></i> deployed</a>
                                     <a href="https://github.com/msesno/brunchclub" class="btn btn-outline-dark btn-sm shadow-sm"><i class="fab fa-github"></i> github</a>
                                 </div>
                               </div>
@@ -246,7 +255,7 @@ div.sticky {
                               <h5 class="card-title">Softball Stats</h5>
                               <p class="card-text">Quick and dirty REACT site beta to track and record softball teams, players, and games.</p>
                               <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
-                                  <a href="https://fierce-ravine-50744.herokuapp.com/" class="btn btn-outline-primary btn-sm shadow-sm">deployed</a>
+                                  <a href="https://fierce-ravine-50744.herokuapp.com/" class="btn btn-outline-primary btn-sm shadow-sm"><i class="fas fa-paper-plane"></i> deployed</a>
                                   <a href="https://github.com/msesno/softballstats" class="btn btn-outline-dark btn-sm shadow-sm"><i class="fab fa-github"></i> github</a>
                               </div>
                             </div>
@@ -299,7 +308,7 @@ div.sticky {
   <div class="col-md-7" id="employment">
     <div class="card shadow" style="margin-bottom: 20px;">
       <div class="card-header bg-dark text-white">
-        <h4 class="card-title"><strong>Employment</strong></h4>
+        <h4 class="card-title"><strong><i class="fas fa-user-tie"></i> Employment</strong></h4>
         <p class="card-text">+ recent opportunities</p>
       </div>
       
@@ -326,7 +335,7 @@ div.sticky {
   <div class="col-md-5" id="education">
     <div class="card shadow">
       <div class="card-header bg-dark text-white">
-        <h4 class="card-title "><strong>Education</strong></h4>
+        <h4 class="card-title "><strong><i class="fas fa-apple-alt"></i> Education</strong></h4>
         <p class="card-text">+ recent accreditations</p>
       </div>
       <ul class="list-group list-group-flush">
@@ -339,8 +348,8 @@ div.sticky {
         <!-- <a href="#" class="card-link btn btn-outline-dark">resume</a>
         <a href="#" class="card-link btn btn-outline-primary">github</a> -->
         <div class="btn-group btn-group-sm btn-block shadow-sm" role="group" aria-label="Basic example">
-            <a class="btn btn-outline-secondary shadow-sm" href="#about" role="button"><i class="fas fa-info-circle"></i> about</a>
-            <a class="btn btn-outline-secondary shadow-sm" href="#education" role="button"><i class="far fa-file"></i> education</a>
+            <a class="btn btn-outline-secondary shadow-sm" href="#about" role="button"><i class="fas fa-info"></i> about</a>
+            <a class="btn btn-outline-secondary shadow-sm" href="#employment" role="button"><i class="fas fa-user-tie"></i> Employment</a>
         </div>
       </div>
     
@@ -383,7 +392,7 @@ div.sticky {
                                 <d><h3 align="center">Message Submitted successfully!</h3></d> 
                                 <d><div> I will get back to you as soon as possible. <br><br>
                                 
-                                <button onclick="location=URL" style="width: 25%;">back to top</button>
+                                <button onclick="location=URL" style="width: 25%;"><i class="fas fa-chevron-circle-up"></i> back to top</button>
                                 
                                 </div></d>
                             </div>
@@ -402,7 +411,7 @@ div.sticky {
   
   
               <div class="btn-group btn-group-sm btn-block" role="group" aria-label="Basic example">
-                  <a class="btn btn-outline-secondary shadow-sm" href="#" role="button"><i class="far fa-file"></i> back to top</a>
+                  <a class="btn btn-outline-secondary shadow-sm" href="#" role="button"><i class="fas fa-chevron-up"></i> back to top</a>
                   <a class="btn btn-outline-secondary shadow-sm" href="#projects" role="button"><i class="fas fa-tasks"></i> projects</a>
               </div>
   
@@ -417,7 +426,7 @@ div.sticky {
 </div>
 <footer>
     <div class="bg-dark" id="footColor">
-      <span class="text-muted shadow-sm"><a href="https://github.com/msesno" class="text-decoration-none badge btn btn-sm btn-outline-light shadow-sm"><i class="fab fa-github"></i> github</a> | <a href="assets/img/ms_resume_19.pdf" class="text-decoration-none badge btn btn-sm btn-outline-warning shadow-sm"><i class="fas fa-file-pdf"></i> resume</a></span>   
+      <span class="text-muted shadow-sm"><a href="https://github.com/msesno" class="text-decoration-none badge btn btn-sm btn-outline-light shadow-sm"><i class="fab fa-github"></i> github</a> | <a href="assets/img/ms_resume_19.pdf" class="text-decoration-none badge btn btn-sm btn-outline-warning shadow-sm"><i class="fas fa-file-pdf"></i> resume</a> | <span class="small text-center"> <i class="far fa-copyright"></i> matthew sesno '19 </span></span>   
     </div>
 </footer>
 
